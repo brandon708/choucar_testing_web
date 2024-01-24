@@ -11,7 +11,7 @@ public class ProductPage {
     public static final Target BTN_CATEGORIES = Target.the("Boton Categoria").locatedBy("//section[header[text()='Categorías']]/div/li//p[text()='{0}']/parent::div");
     public static final Target BTN_SUB_CATEGORIES = Target.the("Boton Sub Categoria").locatedBy("//div[@class = 'SubMenu_submenu-container__f05V3']//a[text()= '{0}']");
     public static final Target LBL_NAME_PRODUCT = Target.the("Nombre del Producto").locatedBy("(//ul[@data-fs-product-grid-type = 'hogar']//li)[{0}]/article/section//div/h3");
-    public static final Target LBL_PRECIO_PRODUCT = Target.the("Precio del Producto").locatedBy("(//ul[@data-fs-product-grid-type = 'hogar']//li)[{0}]/article/section/div[2]/div[1]/div/div[1]/div[2]/p");
+    public static final Target LBL_PRECIO_PRODUCT = Target.the("Precio del Producto").locatedBy("(//ul[@data-fs-product-grid-type = 'hogar']//li)[{0}]/article/section/div[2]/div[1]/div/div[1]/div[1]/p");
     public static final Target BTN_AGREGAR = Target.the("Agregar Producto").locatedBy("(//*[@data-fs-product-grid-type = 'hogar']//li)[{0}]//div[2]/div[2]/button");
     public static final Target BTN_AGREGAR_CANT = Target.the("Agregar Cantidad del Producto").locatedBy("(//*[@data-fs-product-grid-type = 'hogar']//li)[{0}]//div[2]/div[2]//button[2]");
     public static final Target BTN_CARRITO = Target.the("Carrito").located(By.xpath("//button[@data-testid= 'cart-toggle']"));
