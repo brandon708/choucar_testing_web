@@ -69,24 +69,24 @@ public class SelectRandom implements Task {
         DecimalFormat df = new DecimalFormat("#,##0.000", symbols);
 
         for (int i = 0; i < cantProducts; i++) {
-            //  handleModal(actor);
+              handleModal(actor);
             nameProductos[i] = ExitoQuestions.nombreProducto(String.valueOf(listaNumerosAleatorios.get(i))).answeredBy(actor);
             precioProductos[i] = ExitoQuestions.precioProducto(String.valueOf(listaNumerosAleatorios.get(i))).answeredBy(actor);
-            // handleModal(actor);
+             handleModal(actor);
             waitForElementAndClickScroll(actor, ProductPage.BTN_AGREGAR.of(String.valueOf(listaNumerosAleatorios.get(i))));
 
-            //  handleModal(actor);
+              handleModal(actor);
             for (int h = 0; h < listaNumerosCantAleatorios.get(i); h++) {
-                // handleModal(actor);
+                 handleModal(actor);
                 waitForElementAndClickScroll(actor, ProductPage.BTN_AGREGAR_CANT.of(String.valueOf(listaNumerosAleatorios.get(i))));
-                // handleModal(actor);
+                 handleModal(actor);
             }
-            //handleModal(actor);
+            handleModal(actor);
             numProductsAdd[i] = listaNumerosCantAleatorios.get(i);
             String[] precioSplit = precioProductos[i].split("[\\s\\u00A0]+");
             precioTotalNum[i] = Double.parseDouble(precioSplit[1]) * (numProductsAdd[i] + 1);
             precioProductosTotal[i] = precioSplit[0] + " " + df.format(precioTotalNum[i]);
-            //handleModal(actor);
+            handleModal(actor);
         }
 
         int sumaCantidades = Arrays.stream(numProductsAdd).sum() + cantProducts;
